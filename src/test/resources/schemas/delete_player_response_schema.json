@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "success": {
+      "type": "boolean",
+      "description": "Indicates whether the delete operation was successful"
+    },
+    "message": {
+      "type": "string",
+      "description": "A message describing the result of the delete operation"
+    }
+  },
+  "required": ["success", "message"],
+  "additionalProperties": false
+}

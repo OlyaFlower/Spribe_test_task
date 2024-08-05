@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "age": {
+      "type": "integer",
+      "minimum": 16,
+      "maximum": 60
+    },
+    "gender": {
+      "type": "string",
+      "enum": ["male", "female"]
+    },
+    "login": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string",
+      "pattern": "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{7,15}$"
+    },
+    "role": {
+      "type": "string",
+      "enum": ["admin", "user"]
+    },
+    "screenName": {
+      "type": "string"
+    }
+  },
+  "required": ["id", "age", "gender", "login", "role", "screenName"]
+}
